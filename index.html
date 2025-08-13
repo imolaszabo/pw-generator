@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="toggle-container">
+            <label id="darkmode-label"for="toggle-input">Dark theme</label>
+            <input onclick=toggle() type="checkbox" id="toggle-input">
+        </div>
+        <div id="input-block">
+        <h1>Generate a <span id="random-password">random password</span></h1>
+        <p id="never-insecure">Never use an insecure password again.</p>
+        <form>
+            <label for="password-length">Enter a number (between 6 and 20) to indicate the needed password length:
+            </label>
+            <input id="password-length-input" type="number" min="6" max="30" required></input>
+            <button id="pw-generate-btn">Generate passwords</button>
+        </form>
+        </div>
+            
+        <div id="pw-div">
+            <p class="generated-pws" id="left-pw"></p>
+            <button onclick="copyContent()" id="copy-btn">Copy</button>
+            <p id="copy-text"></p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

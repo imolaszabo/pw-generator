@@ -1,0 +1,140 @@
+:root {
+  --color-bg: #ECFDF5;
+  --font-color: #273549;
+  --random-pw-color: #10B981;
+  --p-color: #6B7280;
+  --gen-pw-btn: #10B981;
+  --toggle-circle: #10B981;
+  --toggle-input-bg: #1F2937;
+}
+
+.dark {
+  --color-bg: #1F2937;
+  --font-color: white;
+  --random-pw-color: #4ADF86;
+  --p-color: #b5aeae;
+  --gen-pw-btn: #10B981;
+  --toggle-circle: white;
+  --toggle-input-bg: #10B981;
+  
+}
+
+body {
+    margin: 0;
+    padding: 10%;
+    background-color: var(--color-bg);
+    font-family: "Karla", sans-serif;
+    font-weight: 200;
+    font-size: 2ch;
+    color: var(--p-color);
+}
+
+#input-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+h1 {
+    font-weight: 800;
+    max-width: 50%;
+    color: var(--font-color);
+}
+
+#random-password {
+    color: var(--random-pw-color);
+}
+
+#pw-div {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px; 
+    align-items: center;
+    
+}
+
+#never-insecure {
+    font-weight: 500;
+}
+
+input{
+    width: 4rem;
+    font-family: "Karla", sans-serif;
+    margin: 0.8rem 0;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button {
+    width: 12rem;
+    padding: 0.5rem 0.7rem;
+    color: white;
+    background-color: var(--gen-pw-btn);
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+    text-shadow: 1px 1px black;
+    border-radius: 5px;
+    border: none;
+}
+
+#copy-btn {
+    width: 4rem;
+    height: 3rem;
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.generated-pws {
+    background-color: #273549;
+    width: 10rem;
+    height: 3rem;
+    color: #55F991;
+    border-radius: 2px;
+    margin: 0;
+}
+
+#left-pw {
+    margin-right: 3px;
+}
+
+#toggle-container {
+    display: flex;
+    flex-direction: column;
+}
+
+ #toggle-input {
+    -webkit-appearance: none;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: var(--toggle-input-bg);
+    transition: background .3s;
+    outline: none;
+    cursor: pointer;
+}
+
+#toggle-input::after {
+    content: 'off';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.55rem;
+    width: 1.55rem;
+    padding: 8%;
+    background-color: var(--toggle-circle);
+    transition: left .3s;
+}
+
+#toggle-input:checked {
+    background-color: --toggle-input-bg;
+}
+
+#toggle-input:checked::after {
+    left: 70%;
+    content: 'on';
+}
