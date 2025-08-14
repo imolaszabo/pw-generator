@@ -15,6 +15,7 @@ let pwOne = ""
                 return
             }
             else {
+                pwOne = ""
                 for (let i=0; i < passwordLength; i++) {
                         let randomNrOne = Math.floor( Math.random() * characters.length)
                         pwOne += characters[randomNrOne]
